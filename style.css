@@ -13,9 +13,9 @@
 }
 
 .header-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 9fr 1fr 1fr 1fr;
+    grid-template-rows: 3fr 4fr;
     background: linear-gradient(225deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("images/ashe-default-splash.jpg");
     background-size: cover;
     position: relative;
@@ -25,21 +25,51 @@
     padding: 0px;
 }
 
-.header-text {
+.header-title-text {
     margin-right: auto;
-    margin-bottom: 15%;
-    margin-left: 2%;
+    margin-left: 4vw;
     align-self: center;
     color:rgb(200, 170, 110);
     font-family: 'BeaufortBold';
     text-transform: uppercase;
+    font-size: 4vw;
 }
 
-.header-title-text {
-    font-size: 3em;
+.header-ult-info {
+    height: 60%;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    color: white;
+    margin-left: 4vw;
+}
+
+.header-ult-info h2 {
+    font-family: 'BeaufortBold';
+    text-transform: uppercase;
+    font-size: 2vw;
+
+}
+
+.header-ult-info img {  
+    margin-right: auto;
+    margin-left: 2vw;
+    height: 5vw;
+    object-fit: cover;
+}
+
+.header-ult-info-text {
+    margin-right: 30%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+    font-size: 1.2vw
+}
+
+.header-ult-info-text b {
+    color:cornflowerblue;
 }
 
 .theme-images {
+    display: flex;
     overflow: hidden;
     padding: 20px;
     height: 100px;
@@ -55,6 +85,12 @@
 
 .theme-images img:hover {
     transform: scale(1.2);
+}
+
+.main-container {
+    display: grid;
+    background-color: rgb(0,0,30);
+    grid-template-columns: 1fr 1fr;
 }
 
 h1 {
