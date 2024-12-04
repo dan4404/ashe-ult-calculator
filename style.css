@@ -12,6 +12,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Spiegel';
+    src: url(fonts/Spiegel-Regular.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .header-container {
     display: grid;
     grid-template-columns: 9fr 1fr 1fr 1fr;
@@ -42,6 +49,7 @@
     flex-wrap: wrap;
     color: white;
     margin-left: 4vw;
+    color: #f0e6d2;
 }
 
 .header-ult-info h2 {
@@ -60,8 +68,8 @@
 
 .header-ult-info-text {
     margin-right: 30%;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
-    font-size: 1.2vw
+    font-family: 'Spiegel';
+    font-size: 1.2vw;
 }
 
 .header-ult-info-text b {
