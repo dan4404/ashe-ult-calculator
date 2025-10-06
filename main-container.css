@@ -1,7 +1,7 @@
     .backdrop-media {
     display:block;
     background: url("images/ashe-default-splash.jpg");
-    height: 500px;
+    height: 700px;
     background-size: cover;
     background-position: top center;
     }   
@@ -12,7 +12,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         width: 100%;
-        height: 500px;
+        height: 700px;
     }
 
     .header-background-included > * {
@@ -21,7 +21,7 @@
 
     .backdrop-media {
     background: linear-gradient(225deg, rgba(0,0,30,0) 30%, rgba(0,0,30,0.9) 80%), url("images/ashe-default-splash.jpg");
-    max-height: 500px;
+    height: 100%;
     background-size: cover;
     }   
 }
