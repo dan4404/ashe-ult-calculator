@@ -9,19 +9,23 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="main-container.css">
   <link rel="stylesheet" href="main-section.css">
+  <link rel="stylesheet" href="svg.css">
+  <script async src="scripts/svg.js"></script>
+  <script async src="scripts/theme.js"></script>
 </head>
 
 <body>
   <div class="header-background-included">
-    <div class="backdrop-media"></div>
+    <div id="ashe-splash" class="backdrop-media"></div>
     <div class="header-container" id="h-container">
       <div class="header-title-text">
         <span>ASHE </span>ULT CALCULATOR <br>
       </div>
       <div class="theme-images">
-        <input type="image" src="images/high-noon-button.png">
-        <input type="image" src="images/project-button.png">
-        <input type="image" src="images/drx-button.png">
+        <input id="theme-highnoon" type="image" src="images/button/high-noon-button.png">
+        <input id="theme-project" type="image" src="images/button/project-button.png">
+        <input id="theme-drx" type="image" src="images/button/drx-button.png">
+        <input id="theme-spiritblossom" type="image" src="images/button/spirit-blossom-button.png">
       </div>
       <div class="header-ult-info">
         <h2>(R) Enchanted Crystal Arrow</h2>
@@ -43,10 +47,33 @@
         <input style="font-size: 25px;" type="text" name="distance" placeholder="Enter distance in units">
       </form>
     </div>
-    <svg version="1.1"
-     width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg">
-      <rect width="100%" height="100%" fill="blue">
+      <svg 
+      id="board" 
+      viewBox="0 0 600 386" 
+      class="board" 
+      aria-label="Drag the two points to measure distance"
+        xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Subtle grid -->
+        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" opacity=".12" stroke-width="1" />
+        </pattern>
+        <!-- Point images -->
+        <pattern id="asheIcon" patternUnits="userSpaceOnUse" width="10" height="10">
+          <image href="images/Ashe_0.jpg" x="0" y="0" width="10" height="10" />
+        </pattern>
+        <pattern id="enemyIcon" patternUnits="userSpaceOnUse" width="100" height="100">
+          <image href="images/Trundle_0.jpg" x="0" y="0" width="100" height="100" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)"></rect>
+
+      <!-- Connecting line -->
+      <line id="link" class="link" x1="280" y1="330" x2="450" y2="180" />
+
+      <!-- Draggable points -->
+      <image id="enemyimg" href="images/icon/Trundle_0.png" width="30" height="30" x="435" y="165"/>
+      <image id="asheimg" href="images/icon/default-icon-circle.png" width="30" height="30" x="265" y="315"/>
     </svg>
   </div>
 </body>

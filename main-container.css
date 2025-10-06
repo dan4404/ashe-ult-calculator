@@ -1,6 +1,6 @@
     .backdrop-media {
     display:block;
-    background: url("images/ashe-default-splash.jpg");
+    background: url("images/splash/ashe-default-splash.jpg");
     height: 700px;
     background-size: cover;
     background-position: top center;
@@ -20,7 +20,7 @@
     }
 
     .backdrop-media {
-    background: linear-gradient(225deg, rgba(0,0,30,0) 30%, rgba(0,0,30,0.9) 80%), url("images/ashe-default-splash.jpg");
+    background: linear-gradient(225deg, rgba(0,0,30,0) 30%, rgba(0,0,30,0.9) 80%), url("images/splash/ashe-default-splash.jpg");
     height: 100%;
     background-size: cover;
     }   

@@ -1,4 +1,17 @@
 svg {
-    height: 200px;
-    width: 400px;
+    justify-self: center;
+    border-color: rgb(200, 170, 110);
+    border-style: solid;
+    background: url(images/Bot_Lane_View.png);
+    background-size: cover;
+    margin: 5vw;
+    margin-top: 5vh;
+    flex-basis: 100%;
+}
+
+.link {
+    stroke: rgb(169, 162, 205);
+    stroke-width: 2px;
+    stroke-dasharray: 15 2;
+    opacity: 0.5;
 }
