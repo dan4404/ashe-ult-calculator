@@ -63,8 +63,8 @@ function lineUpdate() {
 }
 
 function calcStun(distance) {
-    distance = Math.max(val, 0);
-    distance = Math.min(val, 2800);
+    distance = Math.max(distance, 0);
+    distance = Math.min(distance, 2800);
     return Math.min((1 + ((distance / 200) * 0.18)), 3.50).toFixed(2);
 }
 
