@@ -43,10 +43,28 @@ function svgPoint(evt) {
 }
 
 function lineUpdate() {
-    line.setAttribute("x1", Number(ashe.getAttribute("x")) + Number(ashe.getAttribute("width")) / 2);
-    line.setAttribute("y1", Number(ashe.getAttribute("y")) +  Number(ashe.getAttribute("height")) / 2);
-    line.setAttribute("x2", Number(enemy.getAttribute("x")) + Number(enemy.getAttribute("width")) / 2);
-    line.setAttribute("y2", Number(enemy.getAttribute("y")) +  Number(enemy.getAttribute("height")) / 2);
+    const asheX = Number(ashe.getAttribute("x"));
+    const asheY = Number(ashe.getAttribute("y"));
+    const enemyX = Number(enemy.getAttribute("x"))
+    const enemyY = Number(enemy.getAttribute("y"))
+
+    line.setAttribute("x1", asheX + Number(ashe.getAttribute("width")) / 2);
+    line.setAttribute("y1", asheY +  Number(ashe.getAttribute("height")) / 2);
+    line.setAttribute("x2", enemyX + Number(enemy.getAttribute("width")) / 2);
+    line.setAttribute("y2", enemyY +  Number(enemy.getAttribute("height")) / 2);
+
+    // update the time display
+    // ratio of SVG units to LoL map units 1:10
+    const units = Math.sqrt(Math.pow(asheX - enemyX, 2) + Math.pow(asheY - enemyY, 2)) * 10
+    time.innerHTML = calcStun(units);
+    // update the input box 
+    dist.value = units.toFixed(2);
+}
+
+function calcStun(distance) {
+    distance = Math.max(val, 0);
+    distance = Math.min(val, 2800);
+    return Math.min((1 + ((distance / 200) * 0.18)), 3.50).toFixed(2);
 }
 
 function bound(pos, max) {

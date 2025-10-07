@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="svg.css">
   <script async src="scripts/svg.js"></script>
   <script async src="scripts/theme.js"></script>
+  <script async src="scripts/calc.js"></script>
 </head>
 
 <body>
@@ -43,12 +44,12 @@
     <div class="distance-input">
       <h2>Distance (in units)</h2>
       <p>Note: 1 teemo is approximately 100 units</p>
-      <form>
-        <input style="font-size: 25px;" type="text" name="distance" placeholder="Enter distance in units">
+      <form id="distance-form">
+        <input id="distance-input" style="font-size: 25px;" type="text" name="distance" placeholder="Enter distance in units">
       </form>
     </div>
     <div id="stun-result" class="result">
-      &nbsp; &nbsp;The target will be stunned for <br> <span>3.04</span> seconds
+      &nbsp; &nbsp;The target will be stunned for <br> <span id="time">3.04</span> seconds
     </div>
     <svg 
       id="board" 
