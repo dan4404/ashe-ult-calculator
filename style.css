@@ -113,6 +113,19 @@ html, body {
     max-height: 1200px; */
 }
 
+footer {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    width:100vw;
+    margin-left: auto;
+}
+
 /* body {
     display: flex;
     flex-direction: column;

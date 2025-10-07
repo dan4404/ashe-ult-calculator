@@ -12,7 +12,6 @@ drx.addEventListener("click", () => changeTheme("images/splash/Ashe_DRX_splash.j
 sb.addEventListener("click", () => changeTheme("images/splash/Ashe_SP_splash.jpg", "images/icon/sp-icon-circle.png"));
 
 function changeTheme(newSplash, newIcon) {
-    console.log("NINJAAAAAA")
     splash.style.background = "linear-gradient(225deg, rgba(0,0,30,0) 30%, rgba(0,0,30,0.9) 80%), url(" + newSplash + ")"
     splash.style.height = "700px";
     splash.style.backgroundSize = "cover";
