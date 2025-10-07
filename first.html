@@ -47,12 +47,15 @@
         <input style="font-size: 25px;" type="text" name="distance" placeholder="Enter distance in units">
       </form>
     </div>
-      <svg 
+    <div id="stun-result" class="result">
+      &nbsp; &nbsp;The target will be stunned for <br> <span>3.04</span> seconds
+    </div>
+    <svg 
       id="board" 
       viewBox="0 0 600 386" 
       class="board" 
       aria-label="Drag the two points to measure distance"
-        xmlns="http://www.w3.org/2000/svg">
+      xmlns="http://www.w3.org/2000/svg">
       <defs>
         <!-- Subtle grid -->
         <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -75,6 +78,7 @@
       <image id="enemyimg" href="images/icon/Trundle_0.png" width="30" height="30" x="435" y="165"/>
       <image id="asheimg" href="images/icon/default-icon-circle.png" width="30" height="30" x="265" y="315"/>
     </svg>
+
   </div>
 </body>
 

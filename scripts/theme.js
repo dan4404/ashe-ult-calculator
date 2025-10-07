@@ -13,7 +13,7 @@ sb.addEventListener("click", () => changeTheme("images/splash/Ashe_SP_splash.jpg
 
 function changeTheme(newSplash, newIcon) {
     console.log("NINJAAAAAA")
-    splash.style.background = "url(" + newSplash + ")"
+    splash.style.background = "linear-gradient(225deg, rgba(0,0,30,0) 30%, rgba(0,0,30,0.9) 80%), url(" + newSplash + ")"
     splash.style.height = "700px";
     splash.style.backgroundSize = "cover";
     splash.style.backgroundPosition = "top center";
