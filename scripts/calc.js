@@ -3,7 +3,6 @@ const distForm = document.getElementById("distance-form");
 const time = document.getElementById("time");
 
 distForm.addEventListener("submit", handle);
-console.log("hello")
 
 function handle(e) {
     e.preventDefault();

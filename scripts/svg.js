@@ -20,6 +20,7 @@ function mouseDown (e) {
 }
 
 function mouseMove(e) {
+    if (unit === null) return;
     const pt = svgPoint(e);
     const x = bound(pt.x, viewbox.w) - Number(unit.getAttribute("width")) / 2
     const y = bound(pt.y, viewbox.h)- Number(unit.getAttribute("height")) / 2
