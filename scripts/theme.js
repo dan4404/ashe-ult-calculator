@@ -1,3 +1,4 @@
+// Handles theme changes 
 const highnoon = document.getElementById("theme-highnoon");
 const project = document.getElementById("theme-project");
 const drx = document.getElementById("theme-drx");

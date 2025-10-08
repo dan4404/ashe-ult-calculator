@@ -1,3 +1,5 @@
+// SVG box + drag and drop circles
+
 let dX = 0, dY = 0, startX = 0, startY = 0;
 
 const ashe = document.getElementById("asheimg");
@@ -48,14 +50,14 @@ function lineUpdate() {
     const asheY = Number(ashe.getAttribute("y"));
     const enemyX = Number(enemy.getAttribute("x"))
     const enemyY = Number(enemy.getAttribute("y"))
-
+    // add offset to center the line in the circle
     line.setAttribute("x1", asheX + Number(ashe.getAttribute("width")) / 2);
     line.setAttribute("y1", asheY +  Number(ashe.getAttribute("height")) / 2);
     line.setAttribute("x2", enemyX + Number(enemy.getAttribute("width")) / 2);
     line.setAttribute("y2", enemyY +  Number(enemy.getAttribute("height")) / 2);
 
     // update the time display
-    // ratio of SVG units to LoL map units 1:10
+    // ratio of SVG units to LoL map units 1:10 .. it is an approximation
     const units = Math.sqrt(Math.pow(asheX - enemyX, 2) + Math.pow(asheY - enemyY, 2)) * 10
     time.innerHTML = calcStun(units);
     // update the input box 

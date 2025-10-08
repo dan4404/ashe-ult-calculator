@@ -1,3 +1,5 @@
+// Handles calculation for stun duration from input box
+
 const dist = document.getElementById("distance-input");
 const distForm = document.getElementById("distance-form");
 const time = document.getElementById("time");
